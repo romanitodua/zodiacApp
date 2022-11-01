@@ -1,0 +1,222 @@
+{
+  "popularzodiacs": [
+    {
+      "name": "Libra",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Aries",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Cancer",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Capricorn",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Gemini",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Leo",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Aquarius",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Pisces",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Sagittarius",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Scorpio",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Taurus",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    },
+    {
+      "name": "Virgo",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "gamoylevebuli",
+      "circle-tviseba-2": "gamoylevebuli2",
+      "circle-tviseba-3": "gamoylevebuli3"
+    }
+  ],
+  "other-zodiacs": [
+    {
+      "name": "Japanese-1",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-2",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-3",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-4",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-5",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-6",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-7",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-8",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-9",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-10",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-11",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    },
+    {
+      "name": "Japanese-12",
+      "description": "uga buga here",
+      "star-tviseba-1": "tviseba-1",
+      "star-tviseba-2": "tviseba-2",
+      "circle-tviseba-1": "circle-tviseba-1",
+      "circle-tviseba-2": "circle-tviseba-2",
+      "circle-tviseba-3": "circle-tviseba-3"
+    }
+  ]
+}
