@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:zodiacapp/Widgets/smalltext.dart';
 import 'package:flutter/material.dart';
 
@@ -7,20 +8,28 @@ import 'bigtext.dart';
 import 'icon_text.dart';
 
 class AppColumn extends StatelessWidget {
+  final IconData circle_icon;
+  final Icon icon;
   final String name;
   final String star_tviseba_1;
   final String star_tviseba_2;
   final String circle_tviseba_1;
   final String circle_tviseba_2;
+  final int star_tviseba_1_number;
+  final int star_tviseba_2_number;
 
-  const AppColumn(
-      {Key? key,
-      required this.name,
-      required this.star_tviseba_1,
-      required this.star_tviseba_2,
-      required this.circle_tviseba_1,
-      required this.circle_tviseba_2,})
-      : super(key: key);
+  const AppColumn({
+    Key? key,
+    required this.circle_icon,
+    required this.star_tviseba_1_number,
+    required this.icon,
+    required this.star_tviseba_2_number,
+    required this.name,
+    required this.star_tviseba_1,
+    required this.star_tviseba_2,
+    required this.circle_tviseba_1,
+    required this.circle_tviseba_2,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +47,9 @@ class AppColumn extends StatelessWidget {
             Wrap(
               children: [
                 ...List.generate(
-                    5,
+                    star_tviseba_1_number,
                     (index) =>
-                        Icon(Icons.star, size: 15, color: Color(0xFF69c5df)))
+                        icon)
               ],
             ),
             SizedBox(
@@ -57,9 +66,9 @@ class AppColumn extends StatelessWidget {
             Wrap(
               children: [
                 ...List.generate(
-                    5,
+                    star_tviseba_2_number,
                     (index) =>
-                        Icon(Icons.star, size: 15, color: Color(0xFF69c5df)))
+                        icon)
               ],
             ),
             SizedBox(
@@ -73,11 +82,11 @@ class AppColumn extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             iconTextWidget(
-                icon: Icons.circle_sharp,
+                icon: circle_icon,
                 text: circle_tviseba_1,
                 iconColor: Color(0xFFFCE4EC)),
             iconTextWidget(
-                icon: Icons.circle_sharp,
+                icon: circle_icon,
                 text: circle_tviseba_2,
                 iconColor: Color(0xFFFCE4EC)),
           ],

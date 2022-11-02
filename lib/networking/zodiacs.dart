@@ -28,6 +28,8 @@ class ZodiacFormatter {
 }
 
 class Popularzodiacs {
+  int? star_tviseba_1_number;
+  int? star_tviseba_2_number;
   int? id;
   String? name;
   String? description;
@@ -37,6 +39,8 @@ class Popularzodiacs {
   String? circleTviseba2;
 
   Popularzodiacs({
+    this.star_tviseba_1_number,
+    this.star_tviseba_2_number,
     this.id,
     this.name,
     this.description,
@@ -54,10 +58,14 @@ class Popularzodiacs {
     starTviseba2 = json['star-tviseba-2'];
     circleTviseba1 = json['circle-tviseba-1'];
     circleTviseba2 = json['circle-tviseba-2'];
+    star_tviseba_1_number = json['star_tviseba_1_number'];
+    star_tviseba_2_number = json['star_tviseba_2_number'];
   }
 }
 
 class OtherZodiacs {
+  int? star_tviseba_1_number;
+  int? star_tviseba_2_number;
   int? id;
   String? name;
   String? description;
@@ -67,6 +75,8 @@ class OtherZodiacs {
   String? circleTviseba2;
 
   OtherZodiacs({
+    this.star_tviseba_1_number,
+    this.star_tviseba_2_number,
     this.id,
     this.name,
     this.description,
@@ -102,5 +112,9 @@ class BlogDetails {
     author = json['author'];
     date = json['date'];
     discription = json['discription'];
+  }
+
+  isEqual(BlogDetails b) {
+    b.title = "h";
   }
 }

@@ -188,7 +188,7 @@ class _NewsLettersState extends State<NewsLetters> {
                   ListView.separated(
                     physics: BouncingScrollPhysics(),
                     shrinkWrap: true,
-                    itemCount: blogDetails!.length,
+                    itemCount: blogDetails.length,
                     itemBuilder: (context, index) {
                       final post = data[index];
                       return GestureDetector(

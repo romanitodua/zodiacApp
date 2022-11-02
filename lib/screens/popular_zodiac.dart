@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:zodiacapp/Widgets/app_column.dart';
 import 'package:zodiacapp/Widgets/app_icon.dart';
 import 'package:zodiacapp/home%20page/mainzodiacpage.dart';
@@ -100,6 +101,10 @@ class ZodiacDetails extends StatelessWidget {
                   return Column(
                     children: [
                       AppColumn(
+                        circle_icon: LineIcons.circle,
+                        icon: Icon(LineIcons.star,size: 15,color: Color(0xFF69c5df)),
+                        star_tviseba_1_number: e.star_tviseba_1_number!,
+                        star_tviseba_2_number: e.star_tviseba_2_number!,
                         name: e.name!,
                         star_tviseba_1: e.starTviseba1!,
                         star_tviseba_2: e.starTviseba2!,
@@ -126,6 +131,10 @@ class ZodiacDetails extends StatelessWidget {
                   return Column(
                     children: [
                       AppColumn(
+                        circle_icon: LineIcons.circle,
+                        icon: Icon(LineIcons.star,size: 15,color: Color(0xFF69c5df),),
+                        star_tviseba_1_number: e.star_tviseba_1_number!,
+                        star_tviseba_2_number: e.star_tviseba_2_number!,
                         name: e.name!,
                         star_tviseba_1: e.starTviseba1!,
                         star_tviseba_2: e.starTviseba2!,

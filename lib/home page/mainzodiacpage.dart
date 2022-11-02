@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:zodiacapp/blog_sector/blogs.dart';
+import 'package:zodiacapp/compatibility/compatibility_main.dart';
 import 'package:zodiacapp/screens/popular_zodiac.dart';
 
 import '../screens/main_body.dart';
@@ -18,7 +19,7 @@ class MainZodiacPage extends StatefulWidget {
 
 class _MainZodiacPageState extends State<MainZodiacPage> {
   int _selectedIndex = 0;
-  static  final List<Widget> _widgetOptions = <Widget>[MainBody(),NewsLetters(),ZodiacDetails(i: 2),MainBody()];
+  static  final List<Widget> _widgetOptions = <Widget>[MainBody(),NewsLetters(),CompatibilityMain(),MainBody()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,8 +56,8 @@ class _MainZodiacPageState extends State<MainZodiacPage> {
                   text: 'NewsLetter',
                 ),
                 GButton(
-                  icon: LineIcons.shoppingBag,
-                  text: 'Shop',
+                  icon: LineIcons.scroll,
+                  text: 'Compatibility',
                 ),
                 GButton(
                   icon: LineIcons.user,

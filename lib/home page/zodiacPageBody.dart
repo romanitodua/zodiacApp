@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:zodiacapp/Widgets/app_column.dart';
 import 'package:zodiacapp/Widgets/bigtext.dart';
 import 'package:zodiacapp/Widgets/icon_text.dart';
@@ -199,11 +200,11 @@ class _ZodiacPageBodyState extends State<ZodiacPageBody> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         iconTextWidget(
-                            icon: Icons.circle_sharp,
+                            icon: LineIcons.circle,
                             text: zf.otherZodiacs![index].circleTviseba1!,
                             iconColor: const Color(0xFFFCE4EC)),
                         iconTextWidget(
-                            icon: Icons.circle_sharp,
+                            icon: LineIcons.circle,
                             text: zf.otherZodiacs![index].circleTviseba2!,
                             iconColor: const Color(0xFFFCE4EC)),
                       ],
@@ -309,6 +310,10 @@ class _ZodiacPageBodyState extends State<ZodiacPageBody> {
                                       )));
                         },
                         child: AppColumn(
+                            circle_icon: LineIcons.circle,
+                          icon: Icon(LineIcons.star,size: 15,color: Color(0xFF69c5df)),
+                          star_tviseba_1_number: zf.popularzodiacs![position].star_tviseba_1_number!,
+                            star_tviseba_2_number: zf.popularzodiacs![position].star_tviseba_2_number!,
                             name: zf.popularzodiacs![position].name!,
                             star_tviseba_1:
                                 zf.popularzodiacs![position].starTviseba1!,
