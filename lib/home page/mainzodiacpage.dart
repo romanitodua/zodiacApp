@@ -8,6 +8,7 @@ import 'package:zodiacapp/blog_sector/blogs.dart';
 import 'package:zodiacapp/compatibility/compatibility_main.dart';
 import 'package:zodiacapp/screens/popular_zodiac.dart';
 
+import '../meme_sector/meme_main.dart';
 import '../screens/main_body.dart';
 
 class MainZodiacPage extends StatefulWidget {
@@ -19,7 +20,7 @@ class MainZodiacPage extends StatefulWidget {
 
 class _MainZodiacPageState extends State<MainZodiacPage> {
   int _selectedIndex = 0;
-  static  final List<Widget> _widgetOptions = <Widget>[MainBody(),NewsLetters(),CompatibilityMain(),MainBody()];
+  static  final List<Widget> _widgetOptions = <Widget>[MainBody(),NewsLetters(),CompatibilityMain(),MemeMainPage(),MainBody()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +43,7 @@ class _MainZodiacPageState extends State<MainZodiacPage> {
               gap: 8,
               activeColor: Colors.black,
               iconSize: 24,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 12),
               duration: Duration(milliseconds: 400),
               tabBackgroundColor: Colors.grey[100]!,
               color: Colors.black,
@@ -58,6 +59,10 @@ class _MainZodiacPageState extends State<MainZodiacPage> {
                 GButton(
                   icon: LineIcons.scroll,
                   text: 'Compatibility',
+                ),
+                GButton(
+                  icon: LineIcons.laughingSquintingFace,
+                  text: 'Memes',
                 ),
                 GButton(
                   icon: LineIcons.user,

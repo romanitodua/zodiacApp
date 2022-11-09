@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 
 import '../Utils/dimensions.dart';
 import '../Widgets/bigtext.dart';
@@ -26,7 +27,7 @@ class _MainBodyState extends State<MainBody> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  children:  [BigText(text: "Your Zodiac"), Row(children: [SmallText(text: "Language"),const Icon(Icons.arrow_drop_down)],)],
+                  children:  [BigText(text: "App Name"), Row(children: [SmallText(text: "Language"),const Icon(Icons.arrow_drop_down)],)],
                 ),
                 Center(
                   child: Container(
@@ -35,7 +36,7 @@ class _MainBodyState extends State<MainBody> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(Dimensions.radius15),
                         color: Colors.cyan[700]),
-                    child:  Icon(Icons.search,color: Colors.white,size: Dimensions.iconsize24,),
+                    child:  Icon(LineIcons.search,color: Colors.white,size: Dimensions.iconsize24,),
                   ),
                 )
               ],

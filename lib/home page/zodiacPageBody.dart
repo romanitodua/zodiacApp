@@ -113,7 +113,7 @@ class _ZodiacPageBodyState extends State<ZodiacPageBody> {
         Container(
           child: ListView.builder(
               shrinkWrap: true,
-              physics:  NeverScrollableScrollPhysics(),
+              physics: NeverScrollableScrollPhysics(),
               itemCount: 12,
               itemBuilder: (context, index) {
                 return Container(
@@ -130,8 +130,8 @@ class _ZodiacPageBodyState extends State<ZodiacPageBody> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => ZodiacDetails(
-                                    i: index,
-                                  )));
+                                        i: index,
+                                      )));
                         },
                         child: Container(
                             width: Dimensions.listViewImageSize,
@@ -254,8 +254,8 @@ class _ZodiacPageBodyState extends State<ZodiacPageBody> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => ZodiacDetails(
-                        i: position,
-                      )));
+                            i: position,
+                          )));
             },
             child: Container(
               height: Dimensions.pageViewContainer,
@@ -311,9 +311,12 @@ class _ZodiacPageBodyState extends State<ZodiacPageBody> {
                         },
                         child: AppColumn(
                             circle_icon: LineIcons.circle,
-                          icon: Icon(LineIcons.star,size: 15,color: Color(0xFF69c5df)),
-                          star_tviseba_1_number: zf.popularzodiacs![position].star_tviseba_1_number!,
-                            star_tviseba_2_number: zf.popularzodiacs![position].star_tviseba_2_number!,
+                            icon: Icon(LineIcons.star,
+                                size: 15, color: Color(0xFF69c5df)),
+                            star_tviseba_1_number: zf.popularzodiacs![position]
+                                .star_tviseba_1_number!,
+                            star_tviseba_2_number: zf.popularzodiacs![position]
+                                .star_tviseba_2_number!,
                             name: zf.popularzodiacs![position].name!,
                             star_tviseba_1:
                                 zf.popularzodiacs![position].starTviseba1!,
