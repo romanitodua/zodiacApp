@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:zodiacapp/networking/zodiacs_fetching.dart';
 
+import '../Utils/dimensions.dart';
 import 'MemeItem.dart';
 import 'meme_class.dart';
 
@@ -18,7 +19,7 @@ class _MemeMainPageState extends State<MemeMainPage> {
   Offset _tapPosition = Offset.zero;
   int number = 0;
   late List<Pages> memeItems;
-  List<Widget> images = List.generate(12, (index) => Image ( image:AssetImage("assets/images/loadingjpg.jpg")));
+  List<Widget> images = List.generate(1, (index) => Text("Loading"));
   late List<String> pageNames;
 
   @override
@@ -27,7 +28,7 @@ class _MemeMainPageState extends State<MemeMainPage> {
       onLongPress: () => isLoaded?{_showContextMenu(context,number)}:{},
       onTapDown: (position) => isLoaded?{_getTapPosition(position)}:{},
       child: ListWheelScrollView(
-        itemExtent: 400,
+        itemExtent: Dimensions.widthformeme,
         onSelectedItemChanged: (index) => number = index,
         children: images,
       ),

@@ -4,6 +4,8 @@ import 'package:zodiacapp/blog_sector/post_cell.dart';
 import 'package:zodiacapp/networking/zodiacs.dart';
 import 'package:zodiacapp/networking/zodiacs_fetching.dart';
 
+import '../Utils/dimensions.dart';
+
 class Post {
   final String title;
   final String image;
@@ -27,72 +29,12 @@ class NewsLetters extends StatefulWidget {
 class _NewsLettersState extends State<NewsLetters> {
   final data = [
     BlogDetails(
-        title: "titlex1",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription"),
-    BlogDetails(
-        title: "title",
-        img: "img",
-        author: "author",
-        date: "date",
-        discription: "discription")
-  ];
+        title: "",
+        img: "",
+        author: "",
+        date: "",
+        discription: ""),
+    ];
   late List<BlogDetails> blogDetails;
   late List<BlogDetails> originalNetworkList;
   late List<BlogDetails> filteredList;
@@ -111,7 +53,7 @@ class _NewsLettersState extends State<NewsLetters> {
           'Daily Newsletter',
           style: TextStyle(
             color: Colors.black,
-            fontSize: 26,
+            fontSize: Dimensions.font26,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -190,7 +132,7 @@ class _NewsLettersState extends State<NewsLetters> {
                     shrinkWrap: true,
                     itemCount: blogDetails.length,
                     itemBuilder: (context, index) {
-                      final post = data[index];
+
                       return GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -206,7 +148,7 @@ class _NewsLettersState extends State<NewsLetters> {
                         },
                         child: PostCellWidget(
                           title: blogDetails[index].title!,
-                          image: "assets/images/gemini.jpg",
+                          image: "assets/images/loadingjpg.jpg",
                           author: blogDetails[index].author!,
                           date: blogDetails[index].date!,
                         ),

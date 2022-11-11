@@ -5,7 +5,7 @@ import 'package:line_icons/line_icons.dart';
 import '../Utils/dimensions.dart';
 import '../Widgets/bigtext.dart';
 import '../Widgets/smalltext.dart';
-import '../home page/zodiacPageBody.dart';
+import '../home page/BottomMainPage.dart';
 
 class MainBody extends StatefulWidget {
   const MainBody({Key? key}) : super(key: key);
@@ -36,14 +36,14 @@ class _MainBodyState extends State<MainBody> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(Dimensions.radius15),
                         color: Colors.cyan[700]),
-                    child:  Icon(LineIcons.search,color: Colors.white,size: Dimensions.iconsize24,),
+                    child:  Icon(LineIcons.css3Logo,color: Colors.white,size: Dimensions.iconsize24,),
                   ),
                 )
               ],
             ),
           ),
         ),
-        Expanded(child: SingleChildScrollView(child: ZodiacPageBody(),))
+        Expanded(child: SingleChildScrollView(child: BottomMainPage(),))
       ],
     );
   }

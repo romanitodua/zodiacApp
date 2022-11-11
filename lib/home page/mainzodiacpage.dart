@@ -6,7 +6,6 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:zodiacapp/blog_sector/blogs.dart';
 import 'package:zodiacapp/compatibility/compatibility_main.dart';
-import 'package:zodiacapp/screens/popular_zodiac.dart';
 
 import '../meme_sector/meme_main.dart';
 import '../screens/main_body.dart';

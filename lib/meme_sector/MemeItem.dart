@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../Utils/dimensions.dart';
+
 class MemeItem extends StatelessWidget {
   final String title;
   final String image;
@@ -14,8 +16,8 @@ class MemeItem extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 100,
-          height: 100,
+          width: Dimensions.width100,
+          height: Dimensions.height100,
           decoration: BoxDecoration(image: DecorationImage(image: NetworkImage(image))),
         ),
         Text(title)

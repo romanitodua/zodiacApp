@@ -60,7 +60,7 @@ class _CompatibilityMainState extends State<CompatibilityMain> {
               right: 0,
               child: Container(
                 width: double.maxFinite,
-                height: 300,
+                height: Dimensions.height300,
                 child:
                     Padding(padding: EdgeInsets.all(20), child: inputLists()),
               )),
@@ -68,7 +68,7 @@ class _CompatibilityMainState extends State<CompatibilityMain> {
               left: 0,
               right: 0,
               bottom: 0,
-              top: 300 - 100,
+              top: Dimensions.height300 - Dimensions.height100,
               child: compatibilityWidget),
           // expandable widget
         ],
@@ -109,8 +109,8 @@ class _CompatibilityMainState extends State<CompatibilityMain> {
               color: Colors.black45,
             ),
             iconOnClick: const Icon(LineIcons.arrowUp),
-            iconSize: 30,
-            buttonHeight: 60,
+            iconSize: Dimensions.dropdownbutton / 2,
+            buttonHeight: Dimensions.dropdownbutton,
             buttonPadding: const EdgeInsets.only(left: 20, right: 10),
             dropdownDecoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),

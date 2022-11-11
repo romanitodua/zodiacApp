@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../Utils/dimensions.dart';
+
 class PostDetailsPage extends StatelessWidget {
   final String title;
   final String image;
@@ -90,7 +92,7 @@ class PostDetailsPage extends StatelessWidget {
                 title,
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 32,
+                  fontSize: Dimensions.font32,
                 ),
               ),
               const SizedBox(
@@ -135,12 +137,12 @@ class PostDetailsPage extends StatelessWidget {
                     TextSpan(
                         text: discription[0].capitalize,
                         style: GoogleFonts.notoSerif(
-                            color: Colors.black, fontSize: 32)),
+                            color: Colors.black, fontSize: Dimensions.font32)),
                     TextSpan(
                       text: discription.substring(1),
                       style: GoogleFonts.notoSerif(
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: Dimensions.font18,
                         height: 1.7,
                         wordSpacing: 2,
                       ),

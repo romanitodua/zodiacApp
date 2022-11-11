@@ -24,7 +24,18 @@ class Dimensions{
   static double width45 = screenHeight/18.7;
   static double width15 = screenHeight/56.27;
   static double iconsize24 = screenHeight/35.17;
-
+  static double widthforBlogPic = screenWidth/3.03;
+  static double height75 = screenHeight/11.2;
+  static double font10 = screenHeight / 84.4;
+  static double font26 = screenHeight / 32.4;
+  static double font18 = screenHeight / 46.8;
+  static double font32 = screenHeight / 26.37;
+  static double width100 = screenWidth/ 8.4;
+  static double height100 = screenHeight/ 8.4;
+  static double widthformeme = screenWidth/ 1;
+  static double height300 = screenHeight / 2.8;
+  static double dropdownbutton = screenHeight/ 14;
+  static double font30 = screenHeight / 28.13;
   //list view size
   static double listViewImageSize = screenWidth/4;
   static double listViewTextContSize = screenWidth/3.9;

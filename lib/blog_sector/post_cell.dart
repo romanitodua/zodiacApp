@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Utils/dimensions.dart';
+
 class PostCellWidget extends StatelessWidget {
   final String title;
   final String image;
@@ -17,8 +19,8 @@ class PostCellWidget extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              width: 120,
-              height: 75,
+              width: Dimensions.widthforBlogPic,
+              height: Dimensions.height75,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
@@ -38,7 +40,7 @@ class PostCellWidget extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: Dimensions.fontsize16,
                       color: Colors.black,
                     ),
                   ),
@@ -48,7 +50,7 @@ class PostCellWidget extends StatelessWidget {
                   Text(
                     '$author, $date',
                     style: TextStyle(
-                      fontSize: 10,
+                      fontSize: Dimensions.font10,
                     ),
                   ),
                 ],
