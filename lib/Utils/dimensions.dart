@@ -9,7 +9,7 @@ class Dimensions{
   static double pageViewTextContainer=screenHeight/7.03;
   static double height10 = screenHeight/84.4;
   static double height20 = screenHeight/42.2;
-  static double height5 = screenHeight/168.8;
+  static double height5 = screenHeight/188.8;
   static double font20 = screenHeight/42.2;
   static double radius20 = screenHeight/42.2;
   static double radius30 = screenHeight/28.13;
