@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:provider/provider.dart';
 import 'package:zodiacapp/Widgets/app_column.dart';
 import 'package:zodiacapp/Widgets/app_icon.dart';
+import 'package:zodiacapp/ad_state.dart';
 import 'package:zodiacapp/home%20page/mainzodiacpage.dart';
 import 'package:zodiacapp/networking/zodiacs.dart';
 
@@ -10,7 +13,18 @@ import '../Widgets/bigtext.dart';
 import '../Widgets/expandable_text.dart';
 import '../networking/zodiacs_fetching.dart';
 
-class ZodiacDetails extends StatelessWidget {
+class ZodiacDetails extends StatefulWidget {
+  int i;
+
+  ZodiacDetails({Key? key, required this.i}) : super(key: key);
+
+  @override
+  State<ZodiacDetails> createState() => _ZodiacDetailsState();
+}
+
+class _ZodiacDetailsState extends State<ZodiacDetails> {
+   BannerAd? banner;
+
   var array = [
     "assets/images/libra.jpg",
     "assets/images/aries.jpg",
@@ -37,9 +51,27 @@ class ZodiacDetails extends StatelessWidget {
     "assets/images/taurus.jpg",
     "assets/images/virgo.jpg"
   ];
-  int i;
 
-  ZodiacDetails({Key? key, required this.i}) : super(key: key);
+  BannerAdListener get adListener => _adListener;
+
+  final BannerAdListener _adListener =
+      BannerAdListener(onAdLoaded: (ad) => print(ad));
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final adState = Provider.of<AdState>(context);
+    adState.initialization.then((status) => {
+          setState(() {
+            banner = BannerAd(
+                size: AdSize.banner,
+                adUnitId: AdState.bannerAdUnitID,
+                listener: _adListener,
+                request: AdRequest())
+              ..load();
+          })
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +86,7 @@ class ZodiacDetails extends StatelessWidget {
                 height: Dimensions.popularZodiacImgSize,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        fit: BoxFit.cover, image: AssetImage(array[i]))),
+                        fit: BoxFit.cover, image: AssetImage(array[widget.i]))),
               )),
           Positioned(
               top: Dimensions.height45,
@@ -71,7 +103,10 @@ class ZodiacDetails extends StatelessWidget {
                             ));
                       },
                       behavior: HitTestBehavior.opaque,
-                      child: AppIcon(icon: Icons.arrow_back_ios,iconcolor: Colors.red,))
+                      child: AppIcon(
+                        icon: Icons.arrow_back_ios,
+                        iconcolor: Colors.red,
+                      ))
                 ],
               )),
           Positioned(
@@ -89,8 +124,12 @@ class ZodiacDetails extends StatelessWidget {
                         topRight: Radius.circular(Dimensions.radius20),
                         topLeft: Radius.circular(Dimensions.radius20)),
                     color: Color(0xFFFFFFFF)),
-                child: _identifyZodiac(i),
+                child: _identifyZodiac(widget.i),
               )),
+          Positioned(
+              bottom: 0, left: 0, right: 0, height: 50,
+              child: banner == null?const SizedBox(height: 50,):AdWidget(ad: banner!)
+          )
           // expandable widget
         ],
       ),
@@ -103,8 +142,7 @@ class ZodiacDetails extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Text("ERROR");
-        }
-        else if (snapshot.hasData) {
+        } else if (snapshot.hasData) {
           {
             ZodiacFormatter zf = snapshot.data!;
             if (i > 11) {
@@ -114,7 +152,8 @@ class ZodiacDetails extends StatelessWidget {
                     children: [
                       AppColumn(
                         circle_icon: LineIcons.circle,
-                        icon: Icon(LineIcons.star,size: 15,color: Color(0xFF69c5df)),
+                        icon: Icon(LineIcons.star,
+                            size: 15, color: Color(0xFF69c5df)),
                         star_tviseba_1_number: e.star_tviseba_1_number!,
                         star_tviseba_2_number: e.star_tviseba_2_number!,
                         name: e.name!,
@@ -144,7 +183,11 @@ class ZodiacDetails extends StatelessWidget {
                     children: [
                       AppColumn(
                         circle_icon: LineIcons.circle,
-                        icon: Icon(LineIcons.star,size: 15,color: Color(0xFF69c5df),),
+                        icon: Icon(
+                          LineIcons.star,
+                          size: 15,
+                          color: Color(0xFF69c5df),
+                        ),
                         star_tviseba_1_number: e.star_tviseba_1_number!,
                         star_tviseba_2_number: e.star_tviseba_2_number!,
                         name: e.name!,
