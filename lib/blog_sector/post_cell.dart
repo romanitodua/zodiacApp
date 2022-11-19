@@ -7,11 +7,15 @@ class PostCellWidget extends StatelessWidget {
   final String image;
   final String author;
   final String date;
+  final bool status;
+
   PostCellWidget(
       {required this.title,
-        required this.image,
-        required this.author,
-        required this.date,});
+      required this.image,
+      required this.author,
+      required this.date,
+      required this.status});
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -22,12 +26,16 @@ class PostCellWidget extends StatelessWidget {
               width: Dimensions.widthforBlogPic,
               height: Dimensions.height75,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  image,
-                  fit: BoxFit.cover,
-                ),
-              ),
+                  borderRadius: BorderRadius.circular(8),
+                  child: status
+                      ? Image(
+                          image: NetworkImage("sds"),
+                          fit: BoxFit.cover,
+                        )
+                      : Image.asset(
+                          image,
+                          fit: BoxFit.cover,
+                        )),
             ),
             const SizedBox(
               width: 20,

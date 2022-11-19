@@ -23,6 +23,18 @@ class ZodiacDetails extends StatelessWidget {
     "assets/images/sagittarius.jpg",
     "assets/images/scorpio.jpg",
     "assets/images/taurus.jpg",
+    "assets/images/virgo.jpg",
+    "assets/images/libra.jpg",
+    "assets/images/aries.jpg",
+    "assets/images/cancer.jpg",
+    "assets/images/capricorn.jpg",
+    "assets/images/gemini.jpg",
+    "assets/images/leo.jpg",
+    "assets/images/aquarius.jpg",
+    "assets/images/pisces.jpg",
+    "assets/images/sagittarius.jpg",
+    "assets/images/scorpio.jpg",
+    "assets/images/taurus.jpg",
     "assets/images/virgo.jpg"
   ];
   int i;
@@ -91,7 +103,8 @@ class ZodiacDetails extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Text("ERROR");
-        } else if (snapshot.hasData) {
+        }
+        else if (snapshot.hasData) {
           {
             ZodiacFormatter zf = snapshot.data!;
             if (i > 11) {

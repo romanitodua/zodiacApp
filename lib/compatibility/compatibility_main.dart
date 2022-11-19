@@ -1,9 +1,12 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
 
 import 'package:zodiacapp/compatibility/compatibility_item.dart';
+import 'package:zodiacapp/networking/CompatibilityFormatter.dart';
+import 'package:zodiacapp/networking/zodiacs_fetching.dart';
 
 import '../Utils/dimensions.dart';
 import '../Widgets/app_column.dart';
@@ -23,6 +26,7 @@ class _CompatibilityMainState extends State<CompatibilityMain> {
   bool appColumnController_2 = false;
   String value_1 = "";
   String value_2 = "";
+  String result = "";
   late Widget compatibilityWidget;
   late CompatibilityItem compatibilityItem_1;
   late CompatibilityItem compatibilityItem_2;
@@ -308,12 +312,27 @@ class _CompatibilityMainState extends State<CompatibilityMain> {
             ),
             Expanded(
                 child: SingleChildScrollView(
-                    child: Text(
-              "The born aesthetes of the zodiac – Libra is obsessed with symmetry and strives to create equilibrium in all areas of life. Venus, the planet that governs love, beauty, and money, and also is the ruling planet of Libras who adore high art, intellectualism, and connoisseurship. They cannot stand chaos, mess, or dickery. They are idealistic perfectionists, and they invest most of their energy in keeping their environment and lives lovely, tidy, and orderly. However, Venus also makes them wonderful lovers! They’re into beautiful things and certainly born with a taste for ALL of the finer things in life. Pairing two Libras at best is pleasing and harmonious. They truly understand each other and have very similar partnership needs and expectations. Togetherness is of utmost value to both, and their similarities can be the foundation for a powerful bond.",
+                    child: FutureBuilder(
+              future: ZodiacFetcher.fetchCompatibility(
+                  formatStrings(value_1, value_2)),
+              builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                if (snapshot.hasData) {
+                  CompatibilityFormatter cf = snapshot.data;
+                  return Text(cf.value!);
+                } else {
+                  return LinearProgressIndicator();
+                }
+              },
             )))
           ],
         ),
       );
     }
+  }
+
+  String formatStrings(String s1, String s2) {
+    String caps1 = s1.capitalizeFirst!;
+    String caps2 = s2.capitalizeFirst!;
+    return '$caps1-$caps2';
   }
 }

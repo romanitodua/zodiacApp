@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:line_icons/line_icons.dart';
 import 'package:zodiacapp/Widgets/smalltext.dart';
 import 'package:flutter/material.dart';
 

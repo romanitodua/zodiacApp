@@ -1,9 +1,8 @@
 class ZodiacFormatter {
   List<Popularzodiacs>? popularzodiacs;
   List<OtherZodiacs>? otherZodiacs;
-  List<BlogDetails>? blogDetails;
 
-  ZodiacFormatter({this.popularzodiacs, this.otherZodiacs, this.blogDetails});
+  ZodiacFormatter({this.popularzodiacs, this.otherZodiacs,});
 
   ZodiacFormatter.fromJson(Map<String, dynamic> json) {
     if (json['popularzodiacs'] != null) {
@@ -16,12 +15,6 @@ class ZodiacFormatter {
       otherZodiacs = <OtherZodiacs>[];
       json['other-zodiacs'].forEach((v) {
         otherZodiacs!.add(new OtherZodiacs.fromJson(v));
-      });
-    }
-    if (json['blog-details'] != null) {
-      blogDetails = <BlogDetails>[];
-      json['blog-details'].forEach((v) {
-        blogDetails!.add(new BlogDetails.fromJson(v));
       });
     }
   }
@@ -94,27 +87,7 @@ class OtherZodiacs {
     starTviseba2 = json['star-tviseba-2'];
     circleTviseba1 = json['circle-tviseba-1'];
     circleTviseba2 = json['circle-tviseba-2'];
-  }
-}
-
-class BlogDetails {
-  String? title;
-  String? img;
-  String? author;
-  String? date;
-  String? discription;
-
-  BlogDetails({this.title, this.img, this.author, this.date, this.discription});
-
-  BlogDetails.fromJson(Map<String, dynamic> json) {
-    title = json['title'];
-    img = json['img'];
-    author = json['author'];
-    date = json['date'];
-    discription = json['discription'];
-  }
-
-  isEqual(BlogDetails b) {
-    b.title = "h";
+    star_tviseba_1_number = json['star_tviseba_1_number'];
+    star_tviseba_2_number = json['star_tviseba_2_number'];
   }
 }

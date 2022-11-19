@@ -10,13 +10,14 @@ class PostDetailsPage extends StatelessWidget {
   final String author;
   final String date;
   final String discription;
-
+  final bool status;
   PostDetailsPage(
       {required this.discription,
       required this.title,
       required this.image,
       required this.author,
-      required this.date});
+      required this.date,
+      required this.status});
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +126,7 @@ class PostDetailsPage extends StatelessWidget {
               Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(image),
+                  child: status?Image(image: NetworkImage(image)):Image.asset(image),
                 ),
               ),
               const SizedBox(

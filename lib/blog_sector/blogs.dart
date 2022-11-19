@@ -5,6 +5,7 @@ import 'package:zodiacapp/networking/zodiacs.dart';
 import 'package:zodiacapp/networking/zodiacs_fetching.dart';
 
 import '../Utils/dimensions.dart';
+import '../networking/BlogDetails.dart';
 
 class Post {
   final String title;
@@ -30,7 +31,7 @@ class _NewsLettersState extends State<NewsLetters> {
   final data = [
     BlogDetails(
         title: "",
-        img: "",
+        img: "assets/images/loadingjpg.jpg",
         author: "",
         date: "",
         discription: ""),
@@ -38,6 +39,7 @@ class _NewsLettersState extends State<NewsLetters> {
   late List<BlogDetails> blogDetails;
   late List<BlogDetails> originalNetworkList;
   late List<BlogDetails> filteredList;
+  bool isLoaded = false;
 
 
   @override
@@ -133,26 +135,50 @@ class _NewsLettersState extends State<NewsLetters> {
                     itemCount: blogDetails.length,
                     itemBuilder: (context, index) {
 
-                      return GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => PostDetailsPage(
-                                      discription:
-                                          blogDetails[index].discription!,
-                                      title: blogDetails[index].title!,
-                                      image: "assets/images/gemini.jpg",
-                                      author: blogDetails[index].author!,
-                                      date: blogDetails[index].date!)));
-                        },
-                        child: PostCellWidget(
-                          title: blogDetails[index].title!,
-                          image: "assets/images/loadingjpg.jpg",
-                          author: blogDetails[index].author!,
-                          date: blogDetails[index].date!,
-                        ),
-                      );
+                      if (isLoaded == false) {
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PostDetailsPage(
+                                        discription:
+                                        blogDetails[index].discription!,
+                                        title: blogDetails[index].title!,
+                                        image: blogDetails[index].img!,
+                                        author: blogDetails[index].author!,
+                                        date: blogDetails[index].date!, status: isLoaded,)));
+                          },
+                          child: PostCellWidget(
+                            title: blogDetails[index].title!,
+                            image: blogDetails[index].img!,
+                            author: blogDetails[index].author!,
+                            date: blogDetails[index].date!, status: isLoaded,
+                          ),
+                        );
+                      }
+                      else {
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PostDetailsPage(
+                                        discription:
+                                        blogDetails[index].discription!,
+                                        title: blogDetails[index].title!,
+                                        image: blogDetails[index].img!,
+                                        author: blogDetails[index].author!,
+                                        date: blogDetails[index].date!, status: isLoaded,)));
+                          },
+                          child: PostCellWidget(
+                            title: blogDetails[index].title!,
+                            image: blogDetails[index].img!,
+                            author: blogDetails[index].author!,
+                            date: blogDetails[index].date!, status: isLoaded,
+                          ),
+                        );
+                      }
                     },
                     separatorBuilder: (context, index) => Divider(),
                   ),
@@ -173,8 +199,8 @@ class _NewsLettersState extends State<NewsLetters> {
   }
 
   Future<void> update() async {
-    ZodiacFormatter zf = await ZodiacFetcher.fetchZodiacs();
-    List<BlogDetails> bd = zf.blogDetails!;
+    BlogDetailsFetcher blogs = await ZodiacFetcher.fetchBlogs();
+    List<BlogDetails> bd = blogs.blogDetails!;
     originalNetworkList = bd;
     setState(() {
       blogDetails = bd;

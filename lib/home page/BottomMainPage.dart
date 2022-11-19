@@ -171,7 +171,7 @@ class _BottomMainPageState extends State<BottomMainPage> {
             context,
             MaterialPageRoute(
                 builder: (context) => ZodiacDetails(
-                      i: index,
+                      i: index+12,
                     )));
       },
       child: Container(
