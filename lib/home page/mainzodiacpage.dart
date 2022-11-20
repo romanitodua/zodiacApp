@@ -19,7 +19,7 @@ class MainZodiacPage extends StatefulWidget {
 
 class _MainZodiacPageState extends State<MainZodiacPage> {
   int _selectedIndex = 0;
-  static  final List<Widget> _widgetOptions = <Widget>[MainBody(),NewsLetters(),CompatibilityMain(),MemeMainPage(),MainBody()];
+  static  final List<Widget> _widgetOptions = <Widget>[MainBody(),NewsLetters(),CompatibilityMain(),MemeMainPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,11 +62,7 @@ class _MainZodiacPageState extends State<MainZodiacPage> {
                 GButton(
                   icon: LineIcons.laughingSquintingFace,
                   text: 'Memes',
-                ),
-                GButton(
-                  icon: LineIcons.user,
-                  text: 'Profile',
-                ),
+                )
               ],
               selectedIndex: _selectedIndex,
               onTabChange: (index) {

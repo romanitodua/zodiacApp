@@ -29,7 +29,7 @@ class PostCellWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   child: status
                       ? Image(
-                          image: NetworkImage("sds"),
+                          image: NetworkImage(image),
                           fit: BoxFit.cover,
                         )
                       : Image.asset(

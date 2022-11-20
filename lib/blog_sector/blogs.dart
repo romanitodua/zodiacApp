@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zodiacapp/blog_sector/blog_details.dart';
 import 'package:zodiacapp/blog_sector/post_cell.dart';
-import 'package:zodiacapp/networking/zodiacs.dart';
 import 'package:zodiacapp/networking/zodiacs_fetching.dart';
 
 import '../Utils/dimensions.dart';
@@ -204,6 +203,7 @@ class _NewsLettersState extends State<NewsLetters> {
     originalNetworkList = bd;
     setState(() {
       blogDetails = bd;
+      isLoaded = true;
     });
   }
 
